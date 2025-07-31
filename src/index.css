@@ -2,75 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Portfolio Design System - UCLA Blue Theme
-All colors MUST be HSL. Dark charcoal background with UCLA blue accents.
+/* Futuristic Developer Portfolio Theme
+All colors MUST be HSL. Deep purple-blue gradient with electric accents.
 */
 
 @layer base {
   :root {
     /* Core Background & Text */
-    --background: 218 15% 10%;
-    --foreground: 210 20% 95%;
+    --background: 194 46% 11%;
+    --foreground: 180 100% 95%;
 
     /* Card & Surface Colors */
-    --card: 218 15% 12%;
-    --card-foreground: 210 20% 95%;
+    --card: 194 38% 15%;
+    --card-foreground: 180 100% 95%;
 
-    /* UCLA Blue Primary Theme */
-    --primary: 207 70% 42%;
-    --primary-foreground: 210 20% 95%;
-    --primary-glow: 207 100% 65%;
+    /* Electric Cyan Primary Theme */
+    --primary: 180 100% 50%;
+    --primary-foreground: 194 46% 11%;
+    --primary-glow: 180 100% 70%;
 
     /* Secondary & Muted Colors */
-    --secondary: 218 15% 15%;
-    --secondary-foreground: 210 20% 85%;
+    --secondary: 194 38% 20%;
+    --secondary-foreground: 180 80% 85%;
 
-    --muted: 218 10% 18%;
-    --muted-foreground: 210 15% 65%;
+    --muted: 194 30% 25%;
+    --muted-foreground: 180 50% 70%;
 
-    /* Accent Colors */
-    --accent: 207 70% 42%;
-    --accent-foreground: 210 20% 95%;
+    /* Magenta Accent Colors */
+    --accent: 300 100% 50%;
+    --accent-foreground: 194 46% 11%;
 
     /* Interactive Elements */
-    --border: 218 15% 20%;
-    --input: 218 15% 15%;
-    --ring: 207 70% 42%;
+    --border: 194 38% 25%;
+    --input: 194 38% 18%;
+    --ring: 180 100% 50%;
 
     /* Destructive */
     --destructive: 0 85% 60%;
-    --destructive-foreground: 210 20% 95%;
+    --destructive-foreground: 180 100% 95%;
 
     /* Popover */
-    --popover: 218 15% 12%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 194 38% 15%;
+    --popover-foreground: 180 100% 95%;
 
     /* Design System Tokens */
     --radius: 0.75rem;
     
-    /* Custom Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    /* Custom Gradients - Futuristic */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-background: linear-gradient(135deg, hsl(194, 46%, 11%), hsl(194, 36%, 19%), hsl(194, 38%, 28%));
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--card)));
-    --gradient-glow: radial-gradient(circle at center, hsl(var(--primary) / 0.3), transparent 70%);
+    --gradient-glow: radial-gradient(circle at center, hsl(var(--primary) / 0.4), transparent 70%);
+    --gradient-cyber: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--accent)), hsl(var(--primary)));
 
-    /* Shadows & Effects */
-    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.3);
-    --shadow-card: 0 4px 20px hsl(var(--background) / 0.8);
-    --shadow-elegant: 0 8px 32px hsl(var(--primary) / 0.15);
+    /* Shadows & Effects - Neon */
+    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.5);
+    --shadow-card: 0 4px 20px hsl(var(--background) / 0.9);
+    --shadow-elegant: 0 8px 32px hsl(var(--primary) / 0.25);
+    --shadow-neon: 0 0 20px hsl(var(--primary) / 0.8), 0 0 40px hsl(var(--primary) / 0.4);
 
     /* Animation Curves */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    --transition-cyber: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
     /* Sidebar (keeping for compatibility) */
-    --sidebar-background: 218 15% 12%;
-    --sidebar-foreground: 210 20% 85%;
-    --sidebar-primary: 207 70% 42%;
-    --sidebar-primary-foreground: 210 20% 95%;
-    --sidebar-accent: 218 15% 15%;
-    --sidebar-accent-foreground: 210 20% 85%;
-    --sidebar-border: 218 15% 20%;
-    --sidebar-ring: 207 70% 42%;
+    --sidebar-background: 194 38% 15%;
+    --sidebar-foreground: 180 80% 85%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 194 46% 11%;
+    --sidebar-accent: 194 38% 20%;
+    --sidebar-accent-foreground: 180 80% 85%;
+    --sidebar-border: 194 38% 25%;
+    --sidebar-ring: 180 100% 50%;
   }
 }
 
@@ -80,6 +84,8 @@ All colors MUST be HSL. Dark charcoal background with UCLA blue accents.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background: linear-gradient(135deg, hsl(194, 46%, 11%), hsl(194, 36%, 19%), hsl(194, 38%, 28%));
+    min-height: 100vh;
   }
 }

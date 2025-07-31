@@ -137,34 +137,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Call to Action */}
-          <div className="text-center bg-gradient-subtle rounded-lg p-8 border border-border">
-            <h3 className="text-xl font-bold text-foreground mb-4">
-              Ready to Work Together?
-            </h3>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              I'm always open to discussing new opportunities, interesting projects, 
-              or just having a conversation about technology and development.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <HeroButton 
-                variant="primary"
-                onClick={() => window.location.href = 'mailto:your@email.com'}
-              >
-                <Mail className="w-4 h-4 mr-2" />
-                Send Me an Email
-              </HeroButton>
-              
-              <HeroButton 
-                variant="outline"
-                onClick={() => window.open('/resume.pdf', '_blank')}
-              >
-                <Download className="w-4 h-4 mr-2" />
-                Download Resume
-              </HeroButton>
-            </div>
-          </div>
         </div>
       </div>
     </div>
