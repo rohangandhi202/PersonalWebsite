@@ -122,10 +122,10 @@ const Experiences = () => {
           </p>
         </div>
 
-        {/* Two Column Layout */}
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Left Column - School */}
-          <div className="space-y-8">
+        {/* Three Column Layout */}
+        <div className="grid lg:grid-cols-3 gap-8">
+          {/* Education Column */}
+          <div className="space-y-6">
             <div className="text-center lg:text-left">
               <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center justify-center lg:justify-start gap-3">
                 <GraduationCap className="w-7 h-7 text-primary" />
@@ -142,42 +142,39 @@ const Experiences = () => {
             </div>
           </div>
 
-          {/* Right Column - Internships & Organizations */}
-          <div className="space-y-12">
-            {/* Internships Section */}
-            <div>
-              <div className="text-center lg:text-left mb-6">
-                <h2 className="text-2xl font-bold text-foreground flex items-center justify-center lg:justify-start gap-3">
-                  <Building className="w-7 h-7 text-primary" />
-                  Internships
-                </h2>
-              </div>
-              
-              <div className="space-y-6">
-                {internshipExperiences.map((experience, index) => (
-                  <div key={index} className="animate-fade-in" style={{ animationDelay: `${(index + 2) * 0.1}s` }}>
-                    <ExperienceCard experience={experience} type="internship" />
-                  </div>
-                ))}
-              </div>
+          {/* Internships Column */}
+          <div className="space-y-6">
+            <div className="text-center lg:text-left">
+              <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center justify-center lg:justify-start gap-3">
+                <Building className="w-7 h-7 text-primary" />
+                Internships
+              </h2>
             </div>
+            
+            <div className="space-y-6">
+              {internshipExperiences.map((experience, index) => (
+                <div key={index} className="animate-fade-in" style={{ animationDelay: `${(index + 2) * 0.1}s` }}>
+                  <ExperienceCard experience={experience} type="internship" />
+                </div>
+              ))}
+            </div>
+          </div>
 
-            {/* Organizations Section */}
-            <div>
-              <div className="text-center lg:text-left mb-6">
-                <h2 className="text-2xl font-bold text-foreground flex items-center justify-center lg:justify-start gap-3">
-                  <Users className="w-7 h-7 text-primary" />
-                  Organizations
-                </h2>
-              </div>
-              
-              <div className="space-y-6">
-                {organizationExperiences.map((experience, index) => (
-                  <div key={index} className="animate-fade-in" style={{ animationDelay: `${(index + 5) * 0.1}s` }}>
-                    <ExperienceCard experience={experience} type="organization" />
-                  </div>
-                ))}
-              </div>
+          {/* Leadership Experience Column */}
+          <div className="space-y-6">
+            <div className="text-center lg:text-left">
+              <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center justify-center lg:justify-start gap-3">
+                <Users className="w-7 h-7 text-primary" />
+                Leadership Experience
+              </h2>
+            </div>
+            
+            <div className="space-y-6">
+              {organizationExperiences.map((experience, index) => (
+                <div key={index} className="animate-fade-in" style={{ animationDelay: `${(index + 5) * 0.1}s` }}>
+                  <ExperienceCard experience={experience} type="organization" />
+                </div>
+              ))}
             </div>
           </div>
         </div>

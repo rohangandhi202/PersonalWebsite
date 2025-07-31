@@ -183,25 +183,6 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Other School Projects Section */}
-        <div className="mt-16 pt-16 border-t border-border/50">
-          <div className="text-center">
-            <h2 className="text-2xl font-bold text-foreground mb-4">
-              Additional School Projects
-            </h2>
-            <p className="text-muted-foreground mb-8">
-              Various coursework and academic projects completed throughout my studies
-            </p>
-            
-            <HeroButton 
-              variant="ghost"
-              onClick={() => window.open('#', '_blank')}
-            >
-              <Code className="w-4 h-4 mr-2" />
-              Explore Academic Work
-            </HeroButton>
-          </div>
-        </div>
       </div>
     </div>
   );

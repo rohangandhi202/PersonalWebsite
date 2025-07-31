@@ -36,19 +36,8 @@ const Home = () => {
               full-stack development.
             </p>
 
-            {/* Call-to-Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in">
-              <HeroButton 
-                variant="primary" 
-                size="lg"
-                className="group"
-                onClick={() => window.location.href = '/projects'}
-              >
-                <Briefcase className="w-5 h-5 mr-2" />
-                View Projects
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </HeroButton>
-              
+            {/* Call-to-Action Button */}
+            <div className="flex justify-center animate-fade-in">
               <HeroButton 
                 variant="outline" 
                 size="lg"
