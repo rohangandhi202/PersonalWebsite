@@ -6,22 +6,22 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       label: "Email",
-      value: "your@email.com",
-      href: "mailto:your@email.com",
+      value: "rohangandhi202@g.ucla.edu",
+      href: "mailto:rohangandhi202@g.ucla.edu",
       description: "Best way to reach me for opportunities"
     },
     {
       icon: <Linkedin className="w-6 h-6" />,
       label: "LinkedIn",
       value: "Connect with me",
-      href: "https://linkedin.com/in/yourprofile",
+      href: "https://www.linkedin.com/in/rohan-gandhi-202/",
       description: "Professional networking and updates"
     },
     {
       icon: <Github className="w-6 h-6" />,
       label: "GitHub",
       value: "View my code",
-      href: "https://github.com/yourprofile",
+      href: "https://github.com/rohangandhi202",
       description: "Explore my projects and contributions"
     },
     {
