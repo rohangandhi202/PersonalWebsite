@@ -9,7 +9,7 @@ const Navigation = () => {
     { id: "home", label: "Home", href: "/" },
     { id: "experiences", label: "Experiences", href: "/experiences" },
     { id: "projects", label: "Projects", href: "/projects" },
-    { id: "contact", label: "About Me / Contact", href: "/contact" },
+    { id: "contact", label: "Contact", href: "/contact" },
   ];
 
   useEffect(() => {
@@ -24,14 +24,8 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-center">
           {/* Logo/Brand */}
-          <Link 
-            to="/" 
-            className="text-xl font-semibold font-inter text-foreground hover:text-primary transition-smooth"
-          >
-            Portfolio
-          </Link>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
@@ -39,7 +33,7 @@ const Navigation = () => {
               <Link
                 key={item.id}
                 to={item.href}
-                className={`relative px-3 py-2 text-sm font-medium font-inter transition-smooth ${
+                className={`relative px-3 py-2 text-sm font-bold font-inter transition-smooth ${
                   activeSection === item.id
                     ? "text-primary"
                     : "text-muted-foreground hover:text-primary"

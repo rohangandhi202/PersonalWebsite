@@ -4,42 +4,52 @@ const Experiences = () => {
   const schoolExperiences = [
     {
       institution: "UCLA",
-      role: "Student",
+      role: "September 2021 - June 2025",
       description: "Pursuing degree with focus on computer science and engineering principles",
-      icon: <GraduationCap className="w-6 h-6" />,
-      period: "Current"
+      icon: <img src="/UclaLogo.png" alt="UCLA Logo" className="w-8 h-8 object-fill" />,
+      period: "Alumni"
     },
     {
       institution: "Bartlett High School", 
-      role: "Graduate",
+      role: "September 2017 - June 2021",
       description: "Foundation in academics and early technology interests",
       icon: <GraduationCap className="w-6 h-6" />,
-      period: "Graduate"
+      period: "Alumni"
     }
   ];
 
   const internshipExperiences = [
     {
       company: "Hudl",
-      role: "Intern",
+      role: "June 2024 - May 2025",
       description: "Sports technology platform - QA testing and development support",
       tech: ["QA", "Testing", "Sports Tech"],
       icon: <Building className="w-6 h-6" />,
-      count: "x2"
+      period: "Hardware QA Engineering Intern"
+    },
+    {
+      company: "Hudl",
+      role: "June 2023 - September 2023",
+      description: "Sports technology platform - QA testing and development support",
+      tech: ["QA", "Testing", "Sports Tech"],
+      icon: <Building className="w-6 h-6" />,
+      period: "Software QA Engineering Intern"
     },
     {
       company: "Chief",
-      role: "Intern", 
-      description: "Professional women's network - technical and development work",
+      role: "December 2022 - January 2023", 
+      description: "Professional network - technical and development work",
       tech: ["Development", "Web Tech"],
-      icon: <Building className="w-6 h-6" />
+      icon: <Building className="w-6 h-6" />,
+      period: "Information Technology Intern"
     },
     {
       company: "TechFabric",
-      role: "Intern",
+      role: "June 2022 - September 2022",
       description: "Technology consulting and development projects",
       tech: ["Consulting", "Development"],
-      icon: <Building className="w-6 h-6" />
+      icon: <Building className="w-6 h-6" />,
+      period: "Product Manager Intern"
     }
   ];
 
@@ -114,11 +124,11 @@ const Experiences = () => {
       <div className="container mx-auto px-6 py-16">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            My <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Experiences</span>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">My Experiences</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            A journey through education, internships, and organizational involvement
+            A journey through education, internships, and student organizations
           </p>
         </div>
 
@@ -147,7 +157,7 @@ const Experiences = () => {
             <div className="text-center lg:text-left">
               <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center justify-center lg:justify-start gap-3">
                 <Building className="w-7 h-7 text-primary" />
-                Internships
+                Internships & Jobs
               </h2>
             </div>
             

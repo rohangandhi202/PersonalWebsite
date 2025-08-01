@@ -1,5 +1,5 @@
 import { HeroButton } from "@/components/ui/hero-button";
-import { Download, ArrowRight, Code, Briefcase } from "lucide-react";
+import { Download, ArrowRight, Code, Globe, Monitor, GitBranch, Bug, Shield, Cloud, Puzzle, Brain } from "lucide-react";
 
 const Home = () => {
   return (
@@ -13,14 +13,11 @@ const Home = () => {
           <div className="max-w-4xl mx-auto text-center">
             {/* Animated Greeting */}
             <div className="mb-6 animate-fade-in">
-              <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20">
-                Welcome to my portfolio
-              </span>
             </div>
 
             {/* Main Heading with Gradient Text */}
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in">
-              <span className="block text-foreground">Hi, I'm a</span>
+              <span className="block text-foreground">ROHAN GANDHI</span>
               <span className="block bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent animate-text-shimmer bg-[length:200%_auto]">
                 QA Engineer &
               </span>
@@ -52,16 +49,12 @@ const Home = () => {
             {/* Quick Stats */}
             <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mt-16 pt-8 border-t border-border/50">
               <div className="text-center animate-slide-in">
-                <div className="text-2xl font-bold text-primary">3+</div>
+                <div className="text-2xl font-bold text-primary">4</div>
                 <div className="text-sm text-muted-foreground">Internships</div>
-              </div>
-              <div className="text-center animate-slide-in" style={{ animationDelay: '0.1s' }}>
-                <div className="text-2xl font-bold text-primary">10+</div>
-                <div className="text-sm text-muted-foreground">Projects</div>
               </div>
               <div className="text-center animate-slide-in" style={{ animationDelay: '0.2s' }}>
                 <div className="text-2xl font-bold text-primary">UCLA</div>
-                <div className="text-sm text-muted-foreground">Student</div>
+                <div className="text-sm text-muted-foreground">Alumni</div>
               </div>
             </div>
           </div>
@@ -73,10 +66,28 @@ const Home = () => {
             <Code className="w-8 h-8 text-primary/20" />
           </div>
           <div className="absolute top-1/3 right-1/4 animate-bounce" style={{ animationDelay: '1s', animationDuration: '4s' }}>
-            <Briefcase className="w-6 h-6 text-primary/20" />
+            <Globe className="w-6 h-6 text-primary/20" />
           </div>
           <div className="absolute bottom-1/3 left-1/3 animate-bounce" style={{ animationDelay: '2s', animationDuration: '5s' }}>
             <Download className="w-7 h-7 text-primary/20" />
+          </div>
+          <div className="absolute bottom-1/4 right-1/3 animate-bounce" style={{ animationDelay: '1.5s', animationDuration: '4.5s' }}>
+            <GitBranch className="w-7 h-7 text-primary/20" />
+          </div>
+          <div className="absolute top-1/6 left-1/6 animate-bounce" style={{ animationDelay: '2.5s', animationDuration: '3.8s' }}>
+            <Bug className="w-5 h-5 text-primary/20" />
+          </div>
+          <div className="absolute bottom-1/6 right-1/6 animate-bounce" style={{ animationDelay: '0.8s', animationDuration: '4.2s' }}>
+            <Shield className="w-6 h-6 text-primary/20" />
+          </div>
+          <div className="absolute top-2/3 left-1/4 animate-bounce" style={{ animationDelay: '1.8s', animationDuration: '3.2s' }}>
+            <Cloud className="w-7 h-7 text-primary/20" />
+          </div>
+          <div className="absolute bottom-1/3 right-1/4 animate-bounce" style={{ animationDelay: '0.3s', animationDuration: '4.8s' }}>
+            <Puzzle className="w-6 h-6 text-primary/20" />
+          </div>
+          <div className="absolute top-1/5 right-1/5 animate-bounce" style={{ animationDelay: '2.2s', animationDuration: '3.6s' }}>
+            <Brain className="w-6 h-6 text-primary/20" />
           </div>
         </div>
       </section>
