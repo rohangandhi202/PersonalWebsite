@@ -14,7 +14,7 @@ const Experiences = () => {
       institution: "Bartlett High School", 
       role: "September 2017 - June 2021",
       description: "Graduated top 2% of my class in the STEM academy.",
-      icon: <img src="/bhs.jpeg" alt="UCLA Logo" className="w-8 h-8 object-fill" />,
+      icon: <img src="/bhs.jpeg" alt="Bartlett Logo" className="w-8 h-8 object-fill" />,
       period: "Alumni",
       tech: ["Engineering", "STEM"]
     }
@@ -26,7 +26,7 @@ const Experiences = () => {
       role: "June 2024 - May 2025",
       description: "Led testing and automation efforts for Hudl Focus hardware and app.",
       tech: ["QA", "Automation", "Hardware", "TypeScript"],
-      icon: <img src="/hudl.png" alt="UCLA Logo" className="w-8 h-8 object-fill" />,
+      icon: <img src="/hudl.png" alt="Hudl Logo" className="w-8 h-8 object-fill" />,
       period: "Hardware QA Engineering Intern"
     },
     {
@@ -34,7 +34,7 @@ const Experiences = () => {
       role: "June 2023 - September 2023",
       description: "Owned QA for critical user-facing features like Auth0 and Team Profiles.",
       tech: ["QA", "Testing", "Cucumber", "Gherkin"],
-      icon: <img src="/hudl.png" alt="UCLA Logo" className="w-8 h-8 object-cover" />,
+      icon: <img src="/hudl.png" alt="Hudl Logo" className="w-8 h-8 object-cover" />,
       period: "Software QA Engineering Intern"
     },
     {
@@ -42,7 +42,7 @@ const Experiences = () => {
       role: "December 2022 - January 2023", 
       description: "Built a NetSuite-integrated feature using Google Sheets API to automate data exports.",
       tech: ["API", "Authentication", "NetSuite", "JSON"],
-      icon: <img src="/chief.jpeg" alt="UCLA Logo" className="w-8 h-8 object-cover" />,
+      icon: <img src="/chief.jpeg" alt="Chief Logo" className="w-8 h-8 object-cover" />,
       period: "Information Technology Intern"
     },
     {
@@ -50,7 +50,7 @@ const Experiences = () => {
       role: "June 2022 - September 2022",
       description: "Supported agile product development by leading client discovery, building roadmaps, and collaborating on sprint planning.",
       tech: ["Product Management", "Jira", "Agile"],
-      icon: <img src="/techFabric.png" alt="UCLA Logo" className="w-8 h-8 object-cover" />,
+      icon: <img src="/techFabric.png" alt="TF Logo" className="w-8 h-8 object-cover" />,
       period: "Product Manager Intern"
     },
     {
@@ -58,7 +58,7 @@ const Experiences = () => {
       role: "June 2019 - September 2019",
       description: "Gained hands-on customer service experience by assisting shoppers with bagging and maintaining cart organization.",
       tech: ["Customer Experience", "Retail"],
-      icon: <img src="/jewelOsco.jpeg" alt="UCLA Logo" className="w-8 h-8 object-cover" />,
+      icon: <img src="/jewelOsco.jpeg" alt="Jewel Logo" className="w-8 h-8 object-cover" />,
       period: "Front End Clerk"
     }
   ];
@@ -69,7 +69,7 @@ const Experiences = () => {
       role: "May 2023 - June 2025",
       description: "Led project recruitment and outreach efforts, connecting UCLA students with teams to build innovative 8-week projects.",
       tech: ["Product Management", "Development", "Creative Tech"],
-      icon: <img src="/cl.jpeg" alt="UCLA Logo" className="w-8 h-8 object-cover" />,
+      icon: <img src="/cl.jpeg" alt="CL Logo" className="w-8 h-8 object-cover" />,
       period: "Projects Director",
     },
     {
@@ -77,7 +77,7 @@ const Experiences = () => {
       role: "September 2021 - June 2025", 
       description: "Organized professional events and managed industry outreach to connect students with alumni, faculty, and corporations.",
       tech: ["Engineering", "Leadership", "Networking"],
-      icon: <img src="/esuc.png" alt="UCLA Logo" className="w-8 h-8 object-cover" />,
+      icon: <img src="/esuc.png" alt="ESUC Logo" className="w-8 h-8 object-cover" />,
       period: "Corporate Director"
     },
     {
@@ -85,7 +85,7 @@ const Experiences = () => {
       role: "April 2023 - June 2024", 
       description: "Built and styled web pages in Next.js to help UCLA students find and apply to research opportunities.",
       tech: ["Frontend", "Next.js", "HTML/CSS"],
-      icon: <img src="/devx.jpeg" alt="UCLA Logo" className="w-8 h-8 object-cover" />,
+      icon: <img src="/devx.jpeg" alt="DEVX Logo" className="w-8 h-8 object-cover" />,
       period: "Web Developer"
     },
     {
@@ -93,7 +93,7 @@ const Experiences = () => {
       role: "September 2021- June 2023", 
       description: "Led fundraising and business operations, securing $50,000 in sponsorships and presenting our development strategy.",
       tech: ["Engineering", "Public Speaking", "Sponsorships"],
-      icon: <img src="/bracing.png" alt="UCLA Logo" className="w-8 h-8 object-cover" />,
+      icon: <img src="/bracing.png" alt="Baja Logo" className="w-8 h-8 object-cover" />,
       period: "Business Lead"
     }
   ];

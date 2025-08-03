@@ -1,96 +1,114 @@
-import { ExternalLink, Github, Code, Database, Brain, Smartphone } from "lucide-react";
+import { ExternalLink, Github, Code, Database, Brain, Smartphone, UserCircle, MapPin } from "lucide-react";
 import { HeroButton } from "@/components/ui/hero-button";
 
 const Projects = () => {
   const projects = [
     {
-      title: "BSwipe",
-      description: "Basketball analytics and scouting platform with swipe-based interface",
-      tech: ["React", "TypeScript", "Basketball Analytics"],
-      icon: <Smartphone className="w-6 h-6" />,
-      github: "#",
-      demo: "#"
-    },
-    {
-      title: "Snowflake + SQL Basketball Data",
-      description: "Advanced basketball statistics analysis using Snowflake data warehouse",
-      tech: ["SQL", "Snowflake", "Data Analytics", "Sports"],
-      icon: <Database className="w-6 h-6" />,
-      github: "#"
+      title: "AI + Python Digit Recognition",
+      description: "Built a digit recognition system using the scikit-learn dataset to compare multiple machine learning models.",
+      tech: ["Python", "Sci-Kit", "Machine Learning"],
+      icon: <img src="/python.jpeg" alt="Python Logo" className="w-8 h-8 object-cover" />,
+      github: "https://github.com/rohangandhi202/AI-Python"
     },
     {
       title: "Data Pipeline (Basketball Reference)",
-      description: "Automated data extraction and processing pipeline from Basketball Reference",
-      tech: ["Python", "Data Pipeline", "Web Scraping", "ETL"],
-      icon: <Code className="w-6 h-6" />,
-      github: "#"
+      description: "Full data pipeline that scrapes, cleans, and structures live NBA stats from Basketball Reference, preparing the data for analysis and modeling",
+      tech: ["Python", "Data Pipeline", "Web Scraping"],
+      icon: <img src="/bball.webp" alt="Bball Logo" className="w-8 h-8 object-cover" />,
+      github: "https://github.com/rohangandhi202/Data-Pipeline"
     },
     {
-      title: "AI + Python Digit Recognition",
-      description: "Machine learning model for handwritten digit recognition using neural networks",
-      tech: ["Python", "TensorFlow", "Machine Learning", "AI"],
-      icon: <Brain className="w-6 h-6" />,
-      github: "#",
-      demo: "#"
-    },
-    {
-      title: "BResearch",
-      description: "Basketball research and analytics dashboard for advanced metrics",
-      tech: ["React", "D3.js", "Sports Analytics"],
-      icon: <Database className="w-6 h-6" />,
-      github: "#"
-    },
-    {
-      title: "Chief Extension",
-      description: "Browser extension for Chief platform enhancement and productivity",
-      tech: ["JavaScript", "Chrome Extension", "Web APIs"],
-      icon: <Code className="w-6 h-6" />,
-      github: "#"
-    },
-    {
-      title: "Pong",
-      description: "Classic Pong game implementation with modern features",
-      tech: ["JavaScript", "Canvas API", "Game Development"],
-      icon: <Code className="w-6 h-6" />,
-      github: "#",
-      demo: "#"
-    },
-    {
-      title: "Weather App",
-      description: "Real-time weather application with beautiful UI and forecasting",
-      tech: ["React", "Weather API", "CSS3"],
-      icon: <Code className="w-6 h-6" />,
-      github: "#",
-      demo: "#"
-    },
-    {
-      title: "RecommendIFY",
-      description: "Spotify-based music recommendation system using collaborative filtering",
-      tech: ["Python", "Spotify API", "Recommendation Engine"],
-      icon: <Brain className="w-6 h-6" />,
-      github: "#"
-    },
-    {
-      title: "High School Website Project",
-      description: "Full website development project completed during high school",
-      tech: ["HTML", "CSS", "JavaScript"],
-      icon: <Code className="w-6 h-6" />,
-      github: "#"
+      title: "Snowflake + SQL Basketball Data",
+      description: "End-to-end NBA analytics pipeline using Snowflake and SQL to load, query, and analyze player stats for performance insights.",
+      tech: ["SQL", "Snowflake", "Data Analytics"],
+      icon: <img src="/snowflake.jpg" alt="snowflake Logo" className="w-8 h-8 object-cover" />,
+      github: "https://github.com/rohangandhi202/SQL-SnowFlake"
     },
     {
       title: "Morse Code Translator",
-      description: "Bidirectional Morse code translator with audio functionality",
-      tech: ["JavaScript", "Web Audio API", "DOM"],
-      icon: <Code className="w-6 h-6" />,
-      github: "#",
-      demo: "#"
+      description: "Implements a hardware-software system on an FPGA that decodes Morse signals via buttons and a keypad into readable text with interactive game functionality.",
+      tech: ["Embedded Systems", "Verilog", "SDK"],
+      icon: <img src="/morse2.png" alt="Morse Logo" className="w-8 h-8 object-cover" />,
+      demo: "https://docs.google.com/presentation/d/1BORb1QtzTYJ1w2D4dRg4Tv3IdFnGXkOB/edit?usp=sharing&ouid=116843038587369030320&rtpof=true&sd=true"
     },
     {
       title: "Energy Delay Product Optimization",
-      description: "Research project optimizing energy-delay trade-offs in computing systems",
-      tech: ["Python", "Optimization", "Research"],
-      icon: <Brain className="w-6 h-6" />,
-      github: "#"
+      description: "Focused on improving the balance between power consumption and processing speed in digital circuits",
+      tech: ["Digital Electronics", "Cadence"],
+      icon: <img src="/ece.jpeg" alt="ECE Logo" className="w-8 h-8 object-cover" />,
+      demo: "https://docs.google.com/document/d/1I9O8HPGuq7A6mIrtsxfh47pdeKs_ogL45R1BPkcFkF4/edit?usp=sharing"
+    },
+    {
+      title: "Chief Extension",
+      description: "Developed a Chrome extension that enables employees to export Saved Search data directly to Google Sheets.",
+      tech: ["JSON", "Chrome Extension", "Web APIs"],
+      icon: <img src="/chief.jpeg" alt="Chief Logo" className="w-8 h-8 object-cover" />,
+      github: "https://github.com/rohangandhi202/ChiefChromeExtenstion"
+    },
+    {
+      title: "BSwipe",
+      description: "A marketplace that lets UCLA students easily buy and sell meal swipes for affordable campus dining.",
+      tech: ["JavaScript", "CSS", "MERN Stack"],
+      icon: <img src="/bswipe.png" alt="BSwipe Logo" className="w-8 h-8 object-cover" />,
+      github: "https://github.com/vikrampuliyadi/swipes_app"
+    },
+    {
+      title: "BResearch",
+      description: "Student-led platform at UCLA that connects undergraduates with research opportunities across campus.",
+      tech: ["React", "Node.js", "Tailwind.css"],
+      icon: <img src="/bresearch.png" alt="BResearch Logo" className="w-8 h-8 object-cover" />,
+      github: "https://github.com/ucladevx/bresearch",
+      demo: "https://www.instagram.com/bresearch_ucla/"
+    },
+    {
+      title: "ClothesLine",
+      description: "Mobile application that allows UCLA students to buy and rent clothes",
+      tech: ["App Development", "Project Management"],
+      icon: <img src="/clothes.png" alt="ClothesLine Logo" className="w-8 h-8 object-cover" />,
+      demo: "https://docs.google.com/presentation/d/1tp2lGsl1PPEt2aSWsbM0JS-tdUQpRCYguyz1I_t0aRY/edit?usp=sharing"
+    },
+    {
+      title: "Pong",
+      description: "Classic Pong game implementation with modern features.",
+      tech: ["Python", "Game Development"],
+      icon: <img src="/pong.png" alt="Pong Logo" className="w-8 h-8 object-cover" />,
+      github: "https://github.com/rohangandhi202/PersonalProject-Pong"
+    },
+    {
+      title: "Weather App",
+      description: "Real-time weather application with current temperature and forecasting for all locations",
+      tech: ["JavaScript", "Weather API", "HTML"],
+      icon: <img src="/weather.webp" alt="Weather Logo" className="w-8 h-8 object-cover" />,
+      github: "https://github.com/rohangandhi202/PersonalProject-WeatherApp"
+    },
+    {
+      title: "RecommendIFY",
+      description: "API that recommends new artists and songs based on your saved music.",
+      tech: ["Pug", "Spotify API", "CSS"],
+      icon: <img src="/spotify.png" alt="Spotify Logo" className="w-8 h-8 object-cover" />,
+      github: "https://github.com/rohangandhi202/PersonalProject-RecommendIFY"
+    },
+    {
+      title: "Local Find",
+      description: "Website that recommended Local restuarants and food to share with friends",
+      tech: ["Web Development", "Project Management"],
+      icon: <MapPin className="w-6 h-6" />,
+      github: "https://github.com/tyu-hi/LocalFind",
+      demo: "https://docs.google.com/presentation/d/11NFOhnzzSPHhyCm773oVj50ZoiB7Sern/edit?usp=sharing&ouid=102845754310807717254&rtpof=true&sd=true"
+    },
+    {
+      title: "Quadcopter",
+      description: "Designed and built a quadcopter for High School class and attached a GoPro to record footage",
+      tech: ["Design and Technology", "Electronics"],
+      icon: <img src="/ece.jpeg" alt="Quadcopter Logo" className="w-8 h-8 object-cover" />,
+      demo: "https://docs.google.com/presentation/d/1hOG2VuuM7dEhe8NNy-I6gCsbajCTkFy4Fp7ECbdlRw0/edit?usp=sharing"
+    },
+    {
+      title: "High School Website Project",
+      description: "A website about myself I made during high school.",
+      tech: ["HTML", "CSS"],
+      icon: <UserCircle className="w-6 h-6" />,
+      github: "https://github.com/rohangandhi202/2021Spring-WebsiteProject"
     }
   ];
 
@@ -161,14 +179,14 @@ const Projects = () => {
             My <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Projects</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
-            A collection of projects spanning web development, data analysis, machine learning, and more
+            A collection of projects spanning web development, data analysis, and more
           </p>
           
           {/* Quick Actions */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <HeroButton 
               variant="outline" 
-              onClick={() => window.open('https://github.com', '_blank')}
+              onClick={() => window.open('https://github.com/rohangandhi202', '_blank')}
             >
               <Github className="w-4 h-4 mr-2" />
               View All on GitHub
