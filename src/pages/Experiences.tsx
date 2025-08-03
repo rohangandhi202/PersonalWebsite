@@ -5,16 +5,18 @@ const Experiences = () => {
     {
       institution: "UCLA",
       role: "September 2021 - June 2025",
-      description: "Pursuing degree with focus on computer science and engineering principles",
+      description: "Graduated with B.S. in Computer Science & Engineering at UCLA, where I built a strong foundation in software development.",
       icon: <img src="/UclaLogo.png" alt="UCLA Logo" className="w-8 h-8 object-fill" />,
-      period: "Alumni"
+      period: "Alumni",
+      tech: ["Computer Science", "Electrical Engineering"]
     },
     {
       institution: "Bartlett High School", 
       role: "September 2017 - June 2021",
-      description: "Foundation in academics and early technology interests",
+      description: "Graduated top 2% of my class in the STEM academy.",
       icon: <img src="/bhs.jpeg" alt="UCLA Logo" className="w-8 h-8 object-fill" />,
-      period: "Alumni"
+      period: "Alumni",
+      tech: ["Engineering", "STEM"]
     }
   ];
 
@@ -22,40 +24,40 @@ const Experiences = () => {
     {
       company: "Hudl",
       role: "June 2024 - May 2025",
-      description: "Sports technology platform - QA testing and development support",
-      tech: ["QA", "Testing", "Sports Tech"],
+      description: "Led testing and automation efforts for Hudl Focus hardware and app.",
+      tech: ["QA", "Automation", "Hardware", "TypeScript"],
       icon: <img src="/hudl.png" alt="UCLA Logo" className="w-8 h-8 object-fill" />,
       period: "Hardware QA Engineering Intern"
     },
     {
       company: "Hudl",
       role: "June 2023 - September 2023",
-      description: "Sports technology platform - QA testing and development support",
-      tech: ["QA", "Testing", "Sports Tech"],
+      description: "Owned QA for critical user-facing features like Auth0 and Team Profiles.",
+      tech: ["QA", "Testing", "Cucumber", "Gherkin"],
       icon: <img src="/hudl.png" alt="UCLA Logo" className="w-8 h-8 object-cover" />,
       period: "Software QA Engineering Intern"
     },
     {
       company: "Chief",
       role: "December 2022 - January 2023", 
-      description: "Professional network - technical and development work",
-      tech: ["Development", "Web Tech"],
+      description: "Built a NetSuite-integrated feature using Google Sheets API to automate data exports.",
+      tech: ["API", "Authentication", "NetSuite", "JSON"],
       icon: <img src="/chief.jpeg" alt="UCLA Logo" className="w-8 h-8 object-cover" />,
       period: "Information Technology Intern"
     },
     {
       company: "TechFabric",
       role: "June 2022 - September 2022",
-      description: "Technology consulting and development projects",
-      tech: ["Consulting", "Development"],
+      description: "Supported agile product development by leading client discovery, building roadmaps, and collaborating on sprint planning.",
+      tech: ["Product Management", "Jira", "Agile"],
       icon: <img src="/techFabric.png" alt="UCLA Logo" className="w-8 h-8 object-cover" />,
       period: "Product Manager Intern"
     },
     {
       company: "Jewel-Osco",
       role: "June 2019 - September 2019",
-      description: "New Description",
-      tech: ["Consulting", "Development"],
+      description: "Gained hands-on customer service experience by assisting shoppers with bagging and maintaining cart organization.",
+      tech: ["Customer Experience", "Retail"],
       icon: <img src="/jewelOsco.jpeg" alt="UCLA Logo" className="w-8 h-8 object-cover" />,
       period: "Front End Clerk"
     }
@@ -65,33 +67,33 @@ const Experiences = () => {
     {
       organization: "Creative Labs",
       role: "May 2023 - June 2025",
-      description: "UCLA's premier creative technology organization",
-      tech: ["Design", "Development", "Creative Tech"],
-      icon: <Users className="w-6 h-6" />,
-      period: "Projects Director"
+      description: "Led project recruitment and outreach efforts, connecting UCLA students with teams to build innovative 8-week projects.",
+      tech: ["Product Management", "Development", "Creative Tech"],
+      icon: <img src="/cl.jpeg" alt="UCLA Logo" className="w-8 h-8 object-cover" />,
+      period: "Projects Director",
     },
     {
       organization: "Engineering Society at UCLA",
       role: "September 2021 - June 2025", 
-      description: "Student organization focused on engineering excellence",
-      tech: ["Engineering", "Leadership"],
-      icon: <Code className="w-6 h-6" />,
+      description: "Organized professional events and managed industry outreach to connect students with alumni, faculty, and corporations.",
+      tech: ["Engineering", "Leadership", "Networking"],
+      icon: <img src="/esuc.png" alt="UCLA Logo" className="w-8 h-8 object-cover" />,
       period: "Corporate Director"
     },
     {
       organization: "DevX",
       role: "April 2023 - June 2024", 
-      description: "New Description",
-      tech: ["Engineering", "Leadership"],
-      icon: <Code className="w-6 h-6" />,
+      description: "Built and styled web pages in Next.js to help UCLA students find and apply to research opportunities.",
+      tech: ["Frontend", "Next.js", "HTML/CSS"],
+      icon: <img src="/devx.jpeg" alt="UCLA Logo" className="w-8 h-8 object-cover" />,
       period: "Web Developer"
     },
     {
       organization: "Bruin Racing Baja",
       role: "September 2021- June 2023", 
-      description: "New Description",
-      tech: ["Engineering", "Leadership"],
-      icon: <Code className="w-6 h-6" />,
+      description: "Led fundraising and business operations, securing $50,000 in sponsorships and presenting our development strategy.",
+      tech: ["Engineering", "Public Speaking", "Sponsorships"],
+      icon: <img src="/bracing.png" alt="UCLA Logo" className="w-8 h-8 object-cover" />,
       period: "Business Lead"
     }
   ];
@@ -103,6 +105,10 @@ const Experiences = () => {
     const isChief = experience.company === "Chief";
     const isTechFabric = experience.company === "TechFabric";
     const isJewelOsco = experience.company === "Jewel-Osco";
+    const isCreativeLabs = experience.organization === "Creative Labs";
+    const isESUC = experience.organization === "Engineering Society at UCLA";
+    const isDevX = experience.organization === "DevX";
+    const isBruinRacing = experience.organization === "Bruin Racing Baja";
     
     const cardContent = (
       <div className="group bg-card hover:bg-card/80 rounded-lg p-6 border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-elegant">
@@ -222,6 +228,58 @@ const Experiences = () => {
       return (
         <a 
           href="https://www.jewelosco.com/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="block"
+        >
+          {cardContent}
+        </a>
+      );
+    }
+    
+    if (isCreativeLabs) {
+      return (
+        <a 
+          href="https://www.creativelabsucla.com/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="block"
+        >
+          {cardContent}
+        </a>
+      );
+    }
+    
+    if (isESUC) {
+      return (
+        <a 
+          href="https://www.esuc.ucla.edu/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="block"
+        >
+          {cardContent}
+        </a>
+      );
+    }
+    
+    if (isDevX) {
+      return (
+        <a 
+          href="https://ucladevx.com/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="block"
+        >
+          {cardContent}
+        </a>
+      );
+    }
+    
+    if (isBruinRacing) {
+      return (
+        <a 
+          href="https://www.bruinracing.org/baja" 
           target="_blank" 
           rel="noopener noreferrer"
           className="block"
