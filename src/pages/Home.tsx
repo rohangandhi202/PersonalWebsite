@@ -10,7 +10,7 @@ const Home = () => {
   
   // Subtitle paragraphs split into words
   const subtitle1 = "Driven and ambitious Engineer with hands on Quality Assurance Engineering experience".split(" ");
-  const subtitle2 = "Built a strong technical foundation at UCLA earning a degree in Computer Science & Engineering".split(" ");
+  const subtitle2 = "Built a strong technical foundation at UCLA, earning a degree in Computer Science & Engineering".split(" ");
   const subtitle3 = "Seeking an entry-level role in software engineering or product management to drive meaningful product improvements".split(" ");
   const buttonText = "Download Resume".split(" ");
   
@@ -32,7 +32,7 @@ const Home = () => {
         } else {
           clearInterval(typeTimer);
           // Start subtitle animations after typewriter completes
-          setTimeout(() => setShowSubtitles(true), 500);
+          setTimeout(() => setShowSubtitles(true), 200);
         }
       }, 150); // Adjust typing speed here (lower = faster)
     }, startDelay);
