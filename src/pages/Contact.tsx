@@ -81,7 +81,7 @@ const Contact = () => {
             <div className="bg-card rounded-lg p-8 border border-border">
               <div className="flex items-start gap-6">
                 <div className="p-4 bg-primary/10 rounded-lg text-primary">
-                  <Coffee className="w-8 h-8" />
+                  <img src="/me.jpg" alt="Profile Picture" className="w-40 h-40 object-cover rounded-full" />
                 </div>
                 
                 <div className="flex-1">
@@ -91,33 +91,17 @@ const Contact = () => {
                   
                   <div className="space-y-4 text-muted-foreground leading-relaxed">
                     <p>
-                      I'm a passionate QA Engineer and aspiring full-stack developer currently studying at UCLA. 
-                      My journey began with a curiosity about how software works and evolved into a deep 
-                      appreciation for both the quality assurance process and the art of building robust applications.
+                    I recently graduated from UCLA with a degree in Computer Science & Engineering and I am currently exploring my next steps. During school, I got into the problem-solving side of software engineering through my algorithms classes and digging into how systems work. 
                     </p>
-                    
                     <p>
-                      Through internships at companies like Hudl, Chief, and TechFabric, I've gained hands-on 
-                      experience in software testing, development workflows, and collaborative problem-solving. 
-                      I'm particularly drawn to the intersection of sports technology, data analytics, and web development.
+                    I spent my internships in Quality Assurance, which allowed me to see products from the user's perspective and I learned how to catch issues before they become real problems. 
                     </p>
-                    
                     <p>
-                      When I'm not coding or testing, you can find me analyzing basketball statistics, 
-                      contributing to student organizations, or exploring the latest developments in 
-                      machine learning and web technologies.
+                    I also got involved in student organizations at UCLA where I led project teams and learned the process of transforming ideas into real products. 
                     </p>
-                  </div>
-
-                  <div className="mt-6 flex items-center gap-4 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-2">
-                      <MapPin className="w-4 h-4" />
-                      Los Angeles, CA
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Coffee className="w-4 h-4" />
-                      Always learning
-                    </div>
+                    <p>
+                    Through those experiences I have built a mix of skills across engineering, product development, and quality, which I am excited to bring into a full-time role. I am looking at entry-level roles in both software engineering and product management since I have really enjoyed the technical building and the strategic thinking sides.
+                    </p>
                   </div>
                 </div>
               </div>
