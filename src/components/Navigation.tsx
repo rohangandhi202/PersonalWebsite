@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState("home");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
   const navItems = [
@@ -21,19 +22,24 @@ const Navigation = () => {
     else if (currentPath.startsWith("/contact")) setActiveSection("contact");
   }, [location]);
 
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location]);
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-center">
           {/* Logo/Brand */}
 
-          {/* Navigation Links */}
+          {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.id}
                 to={item.href}
-                className={`relative px-3 py-2 text-sm font-bold font-inter transition-smooth ${
+                className={`relative px-3 py-2 text-base font-bold font-inter transition-smooth ${
                   activeSection === item.id
                     ? "text-primary"
                     : "text-muted-foreground hover:text-primary"
@@ -48,12 +54,49 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden p-2 text-muted-foreground hover:text-primary transition-smooth">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+          <button 
+            className="md:hidden p-2 text-muted-foreground hover:text-primary transition-smooth"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle mobile menu"
+          >
+            {mobileMenuOpen ? (
+              // X icon when menu is open
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              // Hamburger icon when menu is closed
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
           </button>
         </div>
+
+        {/* Mobile Menu Dropdown */}
+        {mobileMenuOpen && (
+          <div className="md:hidden mt-4 pb-4 border-t border-border">
+            <div className="flex flex-col space-y-2 pt-4">
+              {navItems.map((item) => (
+                <Link
+                  key={item.id}
+                  to={item.href}
+                  className={`relative px-4 py-3 text-lg font-bold font-inter transition-smooth rounded-lg ${
+                    activeSection === item.id
+                      ? "text-primary bg-primary/10"
+                      : "text-muted-foreground hover:text-primary hover:bg-primary/5"
+                  }`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.label}
+                  {activeSection === item.id && (
+                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-primary rounded-r-full" />
+                  )}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
