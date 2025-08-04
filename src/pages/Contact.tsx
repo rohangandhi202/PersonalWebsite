@@ -36,7 +36,7 @@ const Contact = () => {
   const ContactCard = ({ method, index }: { method: any, index: number }) => (
     <a
       href={method.href}
-      target={method.href.startsWith('http') ? '_blank' : '_self'}
+      target={method.href.startsWith('http') || method.href.includes('resume.pdf') ? '_blank' : '_self'}
       rel={method.href.startsWith('http') ? 'noopener noreferrer' : ''}
       className="group bg-card hover:bg-card/80 rounded-lg p-6 border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-elegant animate-fade-in block"
       style={{ animationDelay: `${index * 0.1}s` }}
