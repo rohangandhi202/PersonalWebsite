@@ -33,7 +33,7 @@ const Navigation = () => {
               <Link
                 key={item.id}
                 to={item.href}
-                className={`relative px-3 py-2 text-lg font-bold font-inter transition-smooth ${
+                className={`relative px-3 py-2 text-base font-bold font-inter transition-smooth ${
                   activeSection === item.id
                     ? "text-primary"
                     : "text-muted-foreground hover:text-primary"
