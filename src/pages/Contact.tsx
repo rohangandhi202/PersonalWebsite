@@ -79,12 +79,17 @@ const Contact = () => {
           {/* Bio Section */}
           <div className="mb-16">
             <div className="bg-card rounded-lg p-8 border border-border">
-              <div className="flex items-start gap-6">
-                <div className="p-4 bg-primary/10 rounded-lg text-primary">
-                  <img src="/me.jpg" alt="Profile Picture" className="w-40 h-40 object-cover rounded-full" />
+              {/* Mobile: Stack vertically, Desktop: Side by side */}
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+                {/* Profile Image */}
+                <div className="flex-shrink-0">
+                  <div className="p-4 bg-primary/10 rounded-lg text-primary">
+                    <img src="/me.jpg" alt="Profile Picture" className="w-32 h-32 md:w-40 md:h-40 object-cover rounded-full" />
+                  </div>
                 </div>
                 
-                <div className="flex-1">
+                {/* Text Content */}
+                <div className="flex-1 text-center md:text-left">
                   <h2 className="text-2xl font-bold text-foreground mb-4">
                     Who I Am
                   </h2>
